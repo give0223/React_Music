@@ -1,12 +1,15 @@
 import React from 'react';
 
 class Progress extends React.Component{
+  constructor(props){
+    super(props);
+  }
   render() {
     return(
-      <div className='components-progress row'>
-        <audio controls>
-          < source src = './src/music/DreamItPossible.mp3'/>
-        </audio>
+      <div className='wiper-progress'>
+        <div className='components-progress' style={{'width':this.props.progress}}>
+        </div>
+        <div>{this.props.times},get {this.props.Urls}</div>
       </div>
     );
   }
